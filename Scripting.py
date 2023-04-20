@@ -6,7 +6,6 @@ with open('features.txt') as txtFile:
         tempVal = lines[i].strip()
         tempVal = tempVal.replace(";","").split()
         if len(tempVal) > 1:
-            print(tempVal)
             tempVal = tempVal[1]
             varList.append(tempVal)
 
