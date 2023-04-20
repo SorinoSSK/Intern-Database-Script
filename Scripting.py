@@ -94,6 +94,6 @@ txtFileW.write("        }\n")
 for i in range(len(varList)):
     if varList[i] != "system_mode" or varList[i] != "sentToServer" or varList[i] != "markToSent" :
         txtFileW.write("        else if(strcmp(azColName[i],\"" + varList[i] +"\") == 0)\n")
-        txtFileW.write("            fetched_sensor_data->" + varList[i] + " = atof(argv[i]);\n")
+        txtFileW.write("            fetched_sensor_data->battery." + varList[i] + " = atof(argv[i]);\n")
 txtFileW.close
 
