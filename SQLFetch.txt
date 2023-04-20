@@ -17,8 +17,6 @@
             fetched_sensor_data->battery.primary_positive_pump = atof(argv[i]);
         else if(strcmp(azColName[i],"primary_negative_pump") == 0)
             fetched_sensor_data->battery.primary_negative_pump = atof(argv[i]);
-        else if(strcmp(azColName[i],"system_mode") == 0)
-            fetched_sensor_data->battery.system_mode = atof(argv[i]);
         else if(strcmp(azColName[i],"system_alarm_status") == 0)
             fetched_sensor_data->battery.system_alarm_status = atof(argv[i]);
         else if(strcmp(azColName[i],"balancing_valve") == 0)
@@ -31,8 +29,8 @@
             fetched_sensor_data->battery.state_of_charge = atof(argv[i]);
         else if(strcmp(azColName[i],"bcu_voltage") == 0)
             fetched_sensor_data->battery.bcu_voltage = atof(argv[i]);
-        else if(strcmp(azColName[i],"") == 0)
-            fetched_sensor_data->battery. = atof(argv[i]);
+        else if(strcmp(azColName[i],"bcu_current") == 0)
+            fetched_sensor_data->battery.bcu_current = atof(argv[i]);
         else if(strcmp(azColName[i],"bcu_power") == 0)
             fetched_sensor_data->battery.bcu_power = atof(argv[i]);
         else if(strcmp(azColName[i],"bcu_state_of_charge") == 0)

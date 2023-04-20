@@ -4,11 +4,12 @@ with open('features.txt') as txtFile:
     lines = txtFile.readlines();
     for i in range(len(lines)):
         tempVal = lines[i].strip()
-        tempVal = tempVal.replace(";","").split(" ")
-        print(tempVal)
+        tempVal = tempVal.replace(";","").split()
         if len(tempVal) > 1:
+            print(tempVal)
             tempVal = tempVal[1]
             varList.append(tempVal)
+
 txtFile.close
 
 bltStr = "CREATE TABLE \"dataLog\" (\"uptime\" INTEGER DEFAULT 0,\"timeStamp\" INTEGER DEFAULT 0,\"sentToServer\" INTEGER DEFAULT 0,\"markToSent\" INTEGER DEFAULT 0 "
@@ -67,7 +68,7 @@ txtFileW.write("    }\n")
 txtFileW.write("    loc_count++;\n")
 txtFileW.write("\n")
 for i in range(len(varList)):
-    txtFileW.write("    rc = sqlite_bind_double_status(stmt, loc_count, current_sensor_data->" + varList[i] +");\n")
+    txtFileW.write("    rc = sqlite_bind_double_status(stmt, loc_count, current_sensor_data->battery." + varList[i] +");\n")
     txtFileW.write("    if (rc != SQLITE_OK)\n")
     txtFileW.write("    {\n")
     txtFileW.write("        error.lineNo = __LINE__;\n")
@@ -92,7 +93,7 @@ txtFileW.write("            printf(\"system_mode %lf\\r\\n\",fetched_sensor_data
 txtFileW.write("        }\n")
 
 for i in range(len(varList)):
-    if varList[i] != "system_mode" or varList[i] != "sentToServer" or varList[i] != "markToSent" :
+    if varList[i] != "system_mode" and varList[i] != "sentToServer" and varList[i] != "markToSent" :
         txtFileW.write("        else if(strcmp(azColName[i],\"" + varList[i] +"\") == 0)\n")
         txtFileW.write("            fetched_sensor_data->battery." + varList[i] + " = atof(argv[i]);\n")
 txtFileW.close
