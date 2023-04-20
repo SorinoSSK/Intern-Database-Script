@@ -32,6 +32,7 @@ for i in range(len(varList)+3):
     bltStr2 += ",?"
 bltStr2 += ");\";"
 txtFileW = open("CreateTable.txt", "w+")
+txtFileW.write("DROP TABLE IF EXIST dataLog;\n")
 txtFileW.write(bltStr)
 txtFileW.close
 print("-> Create Table statement completed!")
