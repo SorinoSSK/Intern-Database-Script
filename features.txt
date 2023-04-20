@@ -27,12 +27,14 @@ float primary_charging_relay;   //prcr
     float primary_stack_current;
     float primary_stack_positive_pressure_sensor; 
     float primary_stack_negative_pressure_sensor;
+    // float b0_primary_stack_pressure_delta;
     float positive_stack_pressure_delta;
     float b1_primary_stack_pressure_delta;
 
     float sensor_temp;
     float humidity; 
 
+    //PCS Parameters
     float pcs1_dc_volts;          //1102 # Added on 11 Aug 21
     float pcs1_dc_batt_current;   //1104 # Added on 11 Aug 21
     float pcs1_dc_inverter_power; //1106 # Added on 11 Aug 21
@@ -53,6 +55,7 @@ float primary_charging_relay;   //prcr
     float pcs1InvFreq;
     float pcs1InternalTemperature;
 
+    //new variables
     float secondary_stack_positive_pressure_sensor; 
     float secondary_stack_negative_pressure_sensor; 
     float secondary_stack_voltage;
@@ -64,6 +67,7 @@ float primary_charging_relay;   //prcr
     float fluid_fan;
     float dcdb_fan;
 
+    //PCS2 Parameters
     float pcs2_dc_volts;          
     float pcs2_dc_batt_current;   
     float pcs2_dc_inverter_power;
@@ -79,7 +83,7 @@ float primary_charging_relay;   //prcr
     float pcs2InvFreq;
     float pcs2InternalTemperature; 
 
-
+    //PCS3 Parameters
     float pcs3_dc_volts;          
     float pcs3_dc_batt_current;   
     float pcs3_dc_inverter_power;
@@ -95,7 +99,7 @@ float primary_charging_relay;   //prcr
     float pcs3InvFreq;
     float pcs3InternalTemperature;
 
-
+    //integrated devices
     float lib_soc;
     float lib_cur;
     float lib_vol;
@@ -125,6 +129,7 @@ float primary_charging_relay;   //prcr
     float vfd_5_motor_vol;
     float vfd_5_motor_dcv;
 
+    //
     float flt_ppfs;
     float flt_pnfs;
     float flt_spfs;
