@@ -10,7 +10,7 @@ with open('features.txt') as txtFile:
             tempVal = tempVal[1]
             varList.append(tempVal)
 
-bltStr = "CREATE TABLE \"dataLog\" (\"uptime\" INTEGER DEFAULT 0, \"timeStamp\" INTEGER DEFAULT 0"
+bltStr = "CREATE TABLE \"dataLog\" (\"uptime\" INTEGER DEFAULT 0, \"timeStamp\" INTEGER DEFAULT 0, \"sentToServer\" INTEGER DEFAULT 0, \"markToSent\" INTEGER DEFAULT 0 "
 bltStr2 = "INSERT INTO dataLog(uptime,timeStamp"
 for i in range(len(varList)):
     bltStr += "," + varList[i] + " REAL DEAFULT 0"
