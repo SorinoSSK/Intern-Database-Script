@@ -5,7 +5,7 @@
 
 ## How to use?
 1. Copy defined variable from your entity table and paste it in a file named "features.txt"  
-&emsp - You do not need to clean up your inputs in this text file.
+&emsp; - You do not need to clean up your inputs in this text file.
 2. Run the script
 ```
 python Scripting.py
