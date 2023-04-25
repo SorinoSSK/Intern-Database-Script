@@ -65,6 +65,8 @@
             fetched_sensor_data->battery.primary_stack_positive_pressure_sensor = atof(argv[i]);
         else if(strcmp(azColName[i],"primary_stack_negative_pressure_sensor") == 0)
             fetched_sensor_data->battery.primary_stack_negative_pressure_sensor = atof(argv[i]);
+        else if(strcmp(azColName[i],"float") == 0)
+            fetched_sensor_data->battery.float = atof(argv[i]);
         else if(strcmp(azColName[i],"positive_stack_pressure_delta") == 0)
             fetched_sensor_data->battery.positive_stack_pressure_delta = atof(argv[i]);
         else if(strcmp(azColName[i],"b1_primary_stack_pressure_delta") == 0)
@@ -73,6 +75,44 @@
             fetched_sensor_data->battery.sensor_temp = atof(argv[i]);
         else if(strcmp(azColName[i],"humidity") == 0)
             fetched_sensor_data->battery.humidity = atof(argv[i]);
+        else if(strcmp(azColName[i],"system0PVEnable") == 0)
+            fetched_sensor_data->battery.system0PVEnable = atof(argv[i]);
+        else if(strcmp(azColName[i],"system0PVChargePower") == 0)
+            fetched_sensor_data->battery.system0PVChargePower = atof(argv[i]);
+        else if(strcmp(azColName[i],"system0PVTotalPower") == 0)
+            fetched_sensor_data->battery.system0PVTotalPower = atof(argv[i]);
+        else if(strcmp(azColName[i],"pcs1InvFreq") == 0)
+            fetched_sensor_data->battery.pcs1InvFreq = atof(argv[i]);
+        else if(strcmp(azColName[i],"pcs1InternalTemperature") == 0)
+            fetched_sensor_data->battery.pcs1InternalTemperature = atof(argv[i]);
+        else if(strcmp(azColName[i],"New") == 0)
+            fetched_sensor_data->battery.New = atof(argv[i]);
+        else if(strcmp(azColName[i],"secondary_stack_positive_pressure_sensor") == 0)
+            fetched_sensor_data->battery.secondary_stack_positive_pressure_sensor = atof(argv[i]);
+        else if(strcmp(azColName[i],"secondary_stack_negative_pressure_sensor") == 0)
+            fetched_sensor_data->battery.secondary_stack_negative_pressure_sensor = atof(argv[i]);
+        else if(strcmp(azColName[i],"secondary_stack_voltage") == 0)
+            fetched_sensor_data->battery.secondary_stack_voltage = atof(argv[i]);
+        else if(strcmp(azColName[i],"secondary_stack_current") == 0)
+            fetched_sensor_data->battery.secondary_stack_current = atof(argv[i]);
+        else if(strcmp(azColName[i],"bcu_leakage_sensor2") == 0)
+            fetched_sensor_data->battery.bcu_leakage_sensor2 = atof(argv[i]);
+        else if(strcmp(azColName[i],"dc_main_contactor") == 0)
+            fetched_sensor_data->battery.dc_main_contactor = atof(argv[i]);
+        else if(strcmp(azColName[i],"pre_charge_relay") == 0)
+            fetched_sensor_data->battery.pre_charge_relay = atof(argv[i]);
+        else if(strcmp(azColName[i],"ac_fan_coil1") == 0)
+            fetched_sensor_data->battery.ac_fan_coil1 = atof(argv[i]);
+        else if(strcmp(azColName[i],"fluid_fan") == 0)
+            fetched_sensor_data->battery.fluid_fan = atof(argv[i]);
+        else if(strcmp(azColName[i],"dcdb_fan") == 0)
+            fetched_sensor_data->battery.dcdb_fan = atof(argv[i]);
+        else if(strcmp(azColName[i],"float") == 0)
+            fetched_sensor_data->battery.float = atof(argv[i]);
+        else if(strcmp(azColName[i],"float") == 0)
+            fetched_sensor_data->battery.float = atof(argv[i]);
+        else if(strcmp(azColName[i],"PCS") == 0)
+            fetched_sensor_data->battery.PCS = atof(argv[i]);
         else if(strcmp(azColName[i],"pcs1_dc_volts") == 0)
             fetched_sensor_data->battery.pcs1_dc_volts = atof(argv[i]);
         else if(strcmp(azColName[i],"pcs1_dc_batt_current") == 0)
@@ -97,36 +137,8 @@
             fetched_sensor_data->battery.pcs1_fan_speed = atof(argv[i]);
         else if(strcmp(azColName[i],"pcs1_ac_power") == 0)
             fetched_sensor_data->battery.pcs1_ac_power = atof(argv[i]);
-        else if(strcmp(azColName[i],"system0PVEnable") == 0)
-            fetched_sensor_data->battery.system0PVEnable = atof(argv[i]);
-        else if(strcmp(azColName[i],"system0PVChargePower") == 0)
-            fetched_sensor_data->battery.system0PVChargePower = atof(argv[i]);
-        else if(strcmp(azColName[i],"system0PVTotalPower") == 0)
-            fetched_sensor_data->battery.system0PVTotalPower = atof(argv[i]);
-        else if(strcmp(azColName[i],"pcs1InvFreq") == 0)
-            fetched_sensor_data->battery.pcs1InvFreq = atof(argv[i]);
-        else if(strcmp(azColName[i],"pcs1InternalTemperature") == 0)
-            fetched_sensor_data->battery.pcs1InternalTemperature = atof(argv[i]);
-        else if(strcmp(azColName[i],"secondary_stack_positive_pressure_sensor") == 0)
-            fetched_sensor_data->battery.secondary_stack_positive_pressure_sensor = atof(argv[i]);
-        else if(strcmp(azColName[i],"secondary_stack_negative_pressure_sensor") == 0)
-            fetched_sensor_data->battery.secondary_stack_negative_pressure_sensor = atof(argv[i]);
-        else if(strcmp(azColName[i],"secondary_stack_voltage") == 0)
-            fetched_sensor_data->battery.secondary_stack_voltage = atof(argv[i]);
-        else if(strcmp(azColName[i],"secondary_stack_current") == 0)
-            fetched_sensor_data->battery.secondary_stack_current = atof(argv[i]);
-        else if(strcmp(azColName[i],"bcu_leakage_sensor2") == 0)
-            fetched_sensor_data->battery.bcu_leakage_sensor2 = atof(argv[i]);
-        else if(strcmp(azColName[i],"dc_main_contactor") == 0)
-            fetched_sensor_data->battery.dc_main_contactor = atof(argv[i]);
-        else if(strcmp(azColName[i],"pre_charge_relay") == 0)
-            fetched_sensor_data->battery.pre_charge_relay = atof(argv[i]);
-        else if(strcmp(azColName[i],"ac_fan_coil1") == 0)
-            fetched_sensor_data->battery.ac_fan_coil1 = atof(argv[i]);
-        else if(strcmp(azColName[i],"fluid_fan") == 0)
-            fetched_sensor_data->battery.fluid_fan = atof(argv[i]);
-        else if(strcmp(azColName[i],"dcdb_fan") == 0)
-            fetched_sensor_data->battery.dcdb_fan = atof(argv[i]);
+        else if(strcmp(azColName[i],"Parameters") == 0)
+            fetched_sensor_data->battery.Parameters = atof(argv[i]);
         else if(strcmp(azColName[i],"pcs2_dc_volts") == 0)
             fetched_sensor_data->battery.pcs2_dc_volts = atof(argv[i]);
         else if(strcmp(azColName[i],"pcs2_dc_batt_current") == 0)
@@ -155,6 +167,8 @@
             fetched_sensor_data->battery.pcs2InvFreq = atof(argv[i]);
         else if(strcmp(azColName[i],"pcs2InternalTemperature") == 0)
             fetched_sensor_data->battery.pcs2InternalTemperature = atof(argv[i]);
+        else if(strcmp(azColName[i],"Parameters") == 0)
+            fetched_sensor_data->battery.Parameters = atof(argv[i]);
         else if(strcmp(azColName[i],"pcs3_dc_volts") == 0)
             fetched_sensor_data->battery.pcs3_dc_volts = atof(argv[i]);
         else if(strcmp(azColName[i],"pcs3_dc_batt_current") == 0)
@@ -183,6 +197,8 @@
             fetched_sensor_data->battery.pcs3InvFreq = atof(argv[i]);
         else if(strcmp(azColName[i],"pcs3InternalTemperature") == 0)
             fetched_sensor_data->battery.pcs3InternalTemperature = atof(argv[i]);
+        else if(strcmp(azColName[i],"devices") == 0)
+            fetched_sensor_data->battery.devices = atof(argv[i]);
         else if(strcmp(azColName[i],"lib_soc") == 0)
             fetched_sensor_data->battery.lib_soc = atof(argv[i]);
         else if(strcmp(azColName[i],"lib_cur") == 0)
@@ -239,6 +255,8 @@
             fetched_sensor_data->battery.vfd_5_motor_vol = atof(argv[i]);
         else if(strcmp(azColName[i],"vfd_5_motor_dcv") == 0)
             fetched_sensor_data->battery.vfd_5_motor_dcv = atof(argv[i]);
+        else if(strcmp(azColName[i],"More") == 0)
+            fetched_sensor_data->battery.More = atof(argv[i]);
         else if(strcmp(azColName[i],"flt_ppfs") == 0)
             fetched_sensor_data->battery.flt_ppfs = atof(argv[i]);
         else if(strcmp(azColName[i],"flt_pnfs") == 0)

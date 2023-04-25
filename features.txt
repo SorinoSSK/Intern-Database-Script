@@ -1,38 +1,60 @@
-float primary_charging_relay;   //prcr
-    float primary_discharge_relay;  //prdr
-    float primary_positive_pump;    //prpp
-    float primary_negative_pump;    //prnp
-    float system_mode;              //264 # Added on 11 Aug 21
-    float system_alarm_status;      //266 # Added on 11 Aug 21
-    float balancing_valve;          //bv
-    float positive_valve;           //pv
-    float negative_valve;           //nv
+    float primary_charging_relay;               //prcr
+    float primary_discharge_relay;              //prdr
+    float primary_positive_pump;                //prpp
+    float primary_negative_pump;                //prnp
+    float system_mode;                          //264 # Added on 11 Aug 21
+    float system_alarm_status;                  //266 # Added on 11 Aug 21
+    float balancing_valve;                      //bv
+    float positive_valve;                       //pv
+    float negative_valve;                       //nv
     float state_of_charge;
     float bcu_voltage;
-    float  bcu_current;
+    float bcu_current;
     float bcu_power;
     float bcu_state_of_charge;
-    float bcu_mode_status;          //608 # Added on 11 Aug 21
-    float bcu_hydrogen_sensor;      //618 # Added on 11 Aug 21
-    int bcu_leakage_sensor;         //620 # Added on 11 Aug 21
+    float bcu_mode_status;                      //608 # Added on 11 Aug 21
+    float bcu_hydrogen_sensor;                  //618 # Added on 11 Aug 21
+    int bcu_leakage_sensor;                     //620 # Added on 11 Aug 21
     int smoke_sensor;
     float bcu_ocv;
     float bcu_positive_tank_temp;
     float bcu_negative_tank_temp;
-    int positive_tank_high_level_float; //pthlf
-    int negative_tank_high_level_float; //nthlf
-    int positive_tank_low_level_float;  //ptllf
-    int negative_tank_low_level_float;  //ntllf
+    int positive_tank_high_level_float;         //pthlf
+    int negative_tank_high_level_float;         //nthlf
+    int positive_tank_low_level_float;          //ptllf
+    int negative_tank_low_level_float;          //ntllf
     float primary_stack_voltage;
     float primary_stack_current;
     float primary_stack_positive_pressure_sensor; 
     float primary_stack_negative_pressure_sensor;
+    // float b0_primary_stack_pressure_delta;
     float positive_stack_pressure_delta;
     float b1_primary_stack_pressure_delta;
 
     float sensor_temp;
     float humidity; 
-
+    
+    float system0PVEnable;
+    float system0PVChargePower;
+    float system0PVTotalPower;
+    float pcs1InvFreq;
+    float pcs1InternalTemperature;
+    
+    // New Parameters
+    float secondary_stack_positive_pressure_sensor; 
+    float secondary_stack_negative_pressure_sensor; 
+    float secondary_stack_voltage;
+    float secondary_stack_current;
+    int bcu_leakage_sensor2;
+    float dc_main_contactor;
+    float pre_charge_relay;
+    float ac_fan_coil1;
+    float fluid_fan;
+    float dcdb_fan;
+//    float stk_contactor1;
+//    float stk_contactor2;
+    
+    // PCS 1 Parameters
     float pcs1_dc_volts;          //1102 # Added on 11 Aug 21
     float pcs1_dc_batt_current;   //1104 # Added on 11 Aug 21
     float pcs1_dc_inverter_power; //1106 # Added on 11 Aug 21
@@ -45,25 +67,8 @@ float primary_charging_relay;   //prcr
     float pcs1_fault_status;      //1122 # Added on 11 Aug 21
     float pcs1_fan_speed;         //1124 # Added on 11 Aug 21
     float pcs1_ac_power;
-
-
-    float system0PVEnable;
-    float system0PVChargePower;
-    float system0PVTotalPower;
-    float pcs1InvFreq;
-    float pcs1InternalTemperature;
-
-    float secondary_stack_positive_pressure_sensor; 
-    float secondary_stack_negative_pressure_sensor; 
-    float secondary_stack_voltage;
-    float secondary_stack_current;
-    int bcu_leakage_sensor2;
-    float dc_main_contactor;
-    float pre_charge_relay;
-    float ac_fan_coil1;
-    float fluid_fan;
-    float dcdb_fan;
-
+    
+    //PCS2 Parameters
     float pcs2_dc_volts;          
     float pcs2_dc_batt_current;   
     float pcs2_dc_inverter_power;
@@ -79,7 +84,7 @@ float primary_charging_relay;   //prcr
     float pcs2InvFreq;
     float pcs2InternalTemperature; 
 
-
+    //PCS3 Parameters
     float pcs3_dc_volts;          
     float pcs3_dc_batt_current;   
     float pcs3_dc_inverter_power;
@@ -95,7 +100,7 @@ float primary_charging_relay;   //prcr
     float pcs3InvFreq;
     float pcs3InternalTemperature;
 
-
+    //integrated devices
     float lib_soc;
     float lib_cur;
     float lib_vol;
@@ -124,7 +129,8 @@ float primary_charging_relay;   //prcr
     float vfd_5_motor_curr;
     float vfd_5_motor_vol;
     float vfd_5_motor_dcv;
-
+    
+    // More Parameters
     float flt_ppfs;
     float flt_pnfs;
     float flt_spfs;
