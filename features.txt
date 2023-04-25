@@ -33,6 +33,7 @@
 
     float sensor_temp;
     float humidity; 
+<<<<<<< HEAD
     
     float system0PVEnable;
     float system0PVChargePower;
@@ -55,6 +56,10 @@
 //    float stk_contactor2;
     
     // PCS 1 Parameters
+=======
+
+    //PCS Parameters
+>>>>>>> 11f25dadf0d503c00ced52851d50f88c6f1543a5
     float pcs1_dc_volts;          //1102 # Added on 11 Aug 21
     float pcs1_dc_batt_current;   //1104 # Added on 11 Aug 21
     float pcs1_dc_inverter_power; //1106 # Added on 11 Aug 21
@@ -67,7 +72,30 @@
     float pcs1_fault_status;      //1122 # Added on 11 Aug 21
     float pcs1_fan_speed;         //1124 # Added on 11 Aug 21
     float pcs1_ac_power;
+<<<<<<< HEAD
     
+=======
+
+
+    float system0PVEnable;
+    float system0PVChargePower;
+    float system0PVTotalPower;
+    float pcs1InvFreq;
+    float pcs1InternalTemperature;
+
+    //new variables
+    float secondary_stack_positive_pressure_sensor; 
+    float secondary_stack_negative_pressure_sensor; 
+    float secondary_stack_voltage;
+    float secondary_stack_current;
+    int bcu_leakage_sensor2;
+    float dc_main_contactor;
+    float pre_charge_relay;
+    float ac_fan_coil1;
+    float fluid_fan;
+    float dcdb_fan;
+
+>>>>>>> 11f25dadf0d503c00ced52851d50f88c6f1543a5
     //PCS2 Parameters
     float pcs2_dc_volts;          
     float pcs2_dc_batt_current;   
@@ -129,8 +157,13 @@
     float vfd_5_motor_curr;
     float vfd_5_motor_vol;
     float vfd_5_motor_dcv;
+<<<<<<< HEAD
     
     // More Parameters
+=======
+
+    //
+>>>>>>> 11f25dadf0d503c00ced52851d50f88c6f1543a5
     float flt_ppfs;
     float flt_pnfs;
     float flt_spfs;
