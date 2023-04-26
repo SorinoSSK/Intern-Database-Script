@@ -295,15 +295,6 @@
     }
     loc_count++;
 
-    rc = sqlite_bind_double_status(stmt, loc_count, current_sensor_data->battery.float);
-    if (rc != SQLITE_OK)
-    {
-        error.lineNo = __LINE__;
-        error.rc = rc;
-        return error;
-    }
-    loc_count++;
-
     rc = sqlite_bind_double_status(stmt, loc_count, current_sensor_data->battery.positive_stack_pressure_delta);
     if (rc != SQLITE_OK)
     {
@@ -377,15 +368,6 @@
     loc_count++;
 
     rc = sqlite_bind_double_status(stmt, loc_count, current_sensor_data->battery.pcs1InternalTemperature);
-    if (rc != SQLITE_OK)
-    {
-        error.lineNo = __LINE__;
-        error.rc = rc;
-        return error;
-    }
-    loc_count++;
-
-    rc = sqlite_bind_double_status(stmt, loc_count, current_sensor_data->battery.New);
     if (rc != SQLITE_OK)
     {
         error.lineNo = __LINE__;
@@ -476,33 +458,6 @@
     loc_count++;
 
     rc = sqlite_bind_double_status(stmt, loc_count, current_sensor_data->battery.dcdb_fan);
-    if (rc != SQLITE_OK)
-    {
-        error.lineNo = __LINE__;
-        error.rc = rc;
-        return error;
-    }
-    loc_count++;
-
-    rc = sqlite_bind_double_status(stmt, loc_count, current_sensor_data->battery.float);
-    if (rc != SQLITE_OK)
-    {
-        error.lineNo = __LINE__;
-        error.rc = rc;
-        return error;
-    }
-    loc_count++;
-
-    rc = sqlite_bind_double_status(stmt, loc_count, current_sensor_data->battery.float);
-    if (rc != SQLITE_OK)
-    {
-        error.lineNo = __LINE__;
-        error.rc = rc;
-        return error;
-    }
-    loc_count++;
-
-    rc = sqlite_bind_double_status(stmt, loc_count, current_sensor_data->battery.PCS);
     if (rc != SQLITE_OK)
     {
         error.lineNo = __LINE__;
@@ -611,15 +566,6 @@
     loc_count++;
 
     rc = sqlite_bind_double_status(stmt, loc_count, current_sensor_data->battery.pcs1_ac_power);
-    if (rc != SQLITE_OK)
-    {
-        error.lineNo = __LINE__;
-        error.rc = rc;
-        return error;
-    }
-    loc_count++;
-
-    rc = sqlite_bind_double_status(stmt, loc_count, current_sensor_data->battery.Parameters);
     if (rc != SQLITE_OK)
     {
         error.lineNo = __LINE__;
@@ -754,15 +700,6 @@
     }
     loc_count++;
 
-    rc = sqlite_bind_double_status(stmt, loc_count, current_sensor_data->battery.Parameters);
-    if (rc != SQLITE_OK)
-    {
-        error.lineNo = __LINE__;
-        error.rc = rc;
-        return error;
-    }
-    loc_count++;
-
     rc = sqlite_bind_double_status(stmt, loc_count, current_sensor_data->battery.pcs3_dc_volts);
     if (rc != SQLITE_OK)
     {
@@ -881,15 +818,6 @@
     loc_count++;
 
     rc = sqlite_bind_double_status(stmt, loc_count, current_sensor_data->battery.pcs3InternalTemperature);
-    if (rc != SQLITE_OK)
-    {
-        error.lineNo = __LINE__;
-        error.rc = rc;
-        return error;
-    }
-    loc_count++;
-
-    rc = sqlite_bind_double_status(stmt, loc_count, current_sensor_data->battery.devices);
     if (rc != SQLITE_OK)
     {
         error.lineNo = __LINE__;
@@ -1142,15 +1070,6 @@
     loc_count++;
 
     rc = sqlite_bind_double_status(stmt, loc_count, current_sensor_data->battery.vfd_5_motor_dcv);
-    if (rc != SQLITE_OK)
-    {
-        error.lineNo = __LINE__;
-        error.rc = rc;
-        return error;
-    }
-    loc_count++;
-
-    rc = sqlite_bind_double_status(stmt, loc_count, current_sensor_data->battery.More);
     if (rc != SQLITE_OK)
     {
         error.lineNo = __LINE__;

@@ -24,7 +24,7 @@ bltStr2 = "sql = \"INSERT INTO dataLog(uptime,timeStamp,sentToServer,markToSent"
 print("--------------------------")
 print("Building (Create Table) and (Insert) statement")
 for i in range(len(varList)):
-    bltStr += "," + varList[i] + " REAL DEFAULT 0"
+    bltStr += ",\"" + varList[i] + "\" REAL DEFAULT 0"
     bltStr2 += "," + varList[i]
 bltStr += ");"
 bltStr2 += ") VALUES(?"
@@ -32,7 +32,7 @@ for i in range(len(varList)+3):
     bltStr2 += ",?"
 bltStr2 += ");\";"
 txtFileW = open("CreateTable.txt", "w+")
-txtFileW.write("DROP TABLE IF EXIST dataLog;\n")
+txtFileW.write("DROP TABLE IF EXISTS dataLog;\n")
 txtFileW.write(bltStr)
 txtFileW.close
 print("-> Create Table statement completed!")
